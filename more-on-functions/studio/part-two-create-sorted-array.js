@@ -1,3 +1,7 @@
+let nums1 = [5, 10, 2, 42];
+let nums2 = [-2, 0, -10, -44, 5, 3, 0, 3];
+let nums3 = [200, 5, 4, 10, 8, 5, -3.3, 4.4, 0];
+
 function findMinValue(arr){
   let min = arr[0];
   for (i = 0; i < arr.length; i++){
@@ -19,11 +23,28 @@ function findMinValue(arr){
 6) Be sure to print the results in order to verify your code.*/
 
 //Your function here...
+function leastToGreatest(nums){
+  let newArray =[]
+  while (nums.length > 0){
+    newArray.push(findMinValue(arr));
+    //use splice and use indexOf to get the index of where we want to start our splice
+    nums.splice(nums.indexOf(findMinValue(nums)),1);
+    
+    return newArray;
+  
+  }
+ 
+console.log(newArray(nums1));
+
+}
+
+
+
+
+
+
 
 /* BONUS MISSION: Refactor your sorting function to use recursion below:
  */
 
 //Sample arrays for testing:
-let nums1 = [5, 10, 2, 42];
-let nums2 = [-2, 0, -10, -44, 5, 3, 0, 3];
-let nums3 = [200, 5, 4, 10, 8, 5, -3.3, 4.4, 0];
